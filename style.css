@@ -1,0 +1,146 @@
+/* --- CONFIGURACIÓN GENERAL Y FUENTES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f5f3; /* Color de fondo de la web */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- TARJETA PRINCIPAL (LA INVITACIÓN) --- */
+.card {
+    background-color: #ffffff;
+    max-width: 500px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    text-align: center;
+    border: 1px solid #eef2f5;
+}
+
+/* --- TIPOGRAFÍAS Y ENCABEZADO --- */
+.subtitle {
+    font-size: 1.1rem;
+    color: #2f3e35;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.baby-name {
+    font-family: 'Great Vibes', cursive; /* Fuente caligráfica */
+    font-size: 3.5rem;
+    color: #6e7d73; /* Puedes cambiar este color por el que prefieras */
+    margin-bottom: 30px;
+}
+
+/* --- DETALLES DEL EVENTO --- */
+.details {
+    margin-bottom: 35px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #6e7d73;
+}
+
+.detail-item {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.address {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- CONTADOR DE TIEMPO --- */
+.countdown-container {
+    background-color: #e6ede8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+.countdown-container h3 {
+    font-size: 0.9rem;
+    color: #a0aec0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+#countdown {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+/* --- BOTÓN DE CONFIRMACIÓN --- */
+.btn-confirm {
+    display: inline-block;
+    background-color: #87a390; /* Color del botón */
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Transición suave para el efecto hover */
+    box-shadow: 0 5px 15px rgba(90, 115, 142, 0.2);
+}
+
+/* Efecto al pasar el ratón por encima del botón */
+.btn-confirm:hover {
+    background-color: #465a70;
+    transform: translateY(-2px); /* Eleva el botón ligeramente */
+    box-shadow: 0 8px 20px rgba(90, 115, 142, 0.3);
+}
+
+/* --- BOTÓN PARA LA DIRECCIÓN / MAPA --- */
+.direccion {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre el texto y un posible icono */
+    background-color: transparent; /* Fondo transparente para que sea secundario */
+    color: #5a738e; /* Texto con el color de acento de tu paleta */
+    border: 2px solid #5a738e; /* Borde fino elegante */
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 25px; /* Bordes redondeados sutiles */
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para la animación */
+}
+
+/* Efecto al pasar el ratón por encima (Hover) */
+.direccion:hover {
+    background-color: #eef3f7; /* Se rellena con el fondo suave del contador */
+    color: #41566e; /* El texto se oscurece un poco */
+    border-color: var(--accent-hover); /* El borde también se oscurece */
+    transform: translateY(-1px); /* Micro-movimiento hacia arriba */
+}
+
+/* --- ANIMACIONES --- */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInWithMovement 1.2s forwards ease-out;
+}
+
+@keyframes fadeInWithMovement {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
