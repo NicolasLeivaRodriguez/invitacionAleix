@@ -7,7 +7,19 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f2f5f3; /* Color de fondo de la web */
+
+    /* 1. Color verde pastel de fondo por si tarda en cargar la imagen */
+    background-color: #e2ede4;
+
+    /* 2. Enlace a un patrón de hojas/flores estilo acuarela sutil */
+    background-image: url('v734-toon-34.jpg');
+    /* Puedes cambiar esta URL por tu propio patrón */
+
+    /* 3. Configuración para que el patrón se repita elegantemente */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Controla el tamaño de los dibujos del fondo */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,16 +28,25 @@ body {
 }
 
 /* --- TARJETA PRINCIPAL (LA INVITACIÓN) --- */
+/* --- TARJETA PRINCIPAL (LA INVITACIÓN) --- */
 .card {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Blanco ligeramente transparente para integrarse con el fondo */
     max-width: 500px;
     width: 100%;
     padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    border-radius: 20px;
+    /* Bordes un poco más suaves */
+    box-shadow: 0 15px 35px rgba(47, 62, 53, 0.1);
+    /* Sombra suave para darle volumen */
     text-align: center;
-    border: 1px solid #eef2f5;
+    border: 1px solid rgba(238, 242, 245, 0.7);
+    /* Borde muy sutil */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* Compatibilidad para Safari en iPhone */
 }
+
 
 /* --- TIPOGRAFÍAS Y ENCABEZADO --- */
 .subtitle {
@@ -34,21 +55,29 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    font-weight: 600;
+    /* Antes no tenía, ahora se verá más marcado y definido */
 }
 
 .baby-name {
-    font-family: 'Great Vibes', cursive; /* Fuente caligráfica */
-    font-size: 3.5rem;
-    color: #6e7d73; /* Puedes cambiar este color por el que prefieras */
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.8rem;
+    /* Lo subo un pelín de 3.5 a 3.8 para que destaque aún más */
+    color: #556359;
+    /* Un tono un pelín más oscuro para mejorar el contraste */
     margin-bottom: 30px;
+    font-weight: 500;
+    /* Le damos el grosor máximo que permite esta fuente caligráfica */
 }
 
 /* --- DETALLES DEL EVENTO --- */
 .details {
     margin-bottom: 35px;
-    font-weight: 300;
+    font-weight: 500;
+    /* Cambiado de 300 (fino) a 500 (medio) para que todo el texto tenga más cuerpo */
     line-height: 1.8;
-    color: #6e7d73;
+    color: #2f3e35;
+    /* Oscurecido sutilmente para que resalte sobre el fondo transparente */
 }
 
 .detail-item {
@@ -78,29 +107,35 @@ body {
 }
 
 #countdown {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #2d3748;
+    font-size: 1.4rem;
+    /* Un pelín más grande */
+    font-weight: 600;
+    /* Cambiado de 500 a 600 para que los números se vean súper claros */
+    color: #1a202c;
+    /* Un tono casi negro para asegurar una lectura perfecta */
 }
 
 /* --- BOTÓN DE CONFIRMACIÓN --- */
 .btn-confirm {
     display: inline-block;
-    background-color: #87a390; /* Color del botón */
+    background-color: #87a390;
+    /* Color del botón */
     color: #ffffff;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 500;
     letter-spacing: 1px;
-    transition: all 0.3s ease; /* Transición suave para el efecto hover */
+    transition: all 0.3s ease;
+    /* Transición suave para el efecto hover */
     box-shadow: 0 5px 15px rgba(90, 115, 142, 0.2);
 }
 
 /* Efecto al pasar el ratón por encima del botón */
 .btn-confirm:hover {
     background-color: #465a70;
-    transform: translateY(-2px); /* Eleva el botón ligeramente */
+    transform: translateY(-2px);
+    /* Eleva el botón ligeramente */
     box-shadow: 0 8px 20px rgba(90, 115, 142, 0.3);
 }
 
@@ -109,26 +144,36 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px; /* Espacio entre el texto y un posible icono */
-    background-color: transparent; /* Fondo transparente para que sea secundario */
-    color: #5a738e; /* Texto con el color de acento de tu paleta */
-    border: 2px solid #5a738e; /* Borde fino elegante */
+    gap: 8px;
+    /* Espacio entre el texto y un posible icono */
+    background-color: transparent;
+    /* Fondo transparente para que sea secundario */
+    color: #5a738e;
+    /* Texto con el color de acento de tu paleta */
+    border: 2px solid #5a738e;
+    /* Borde fino elegante */
     padding: 10px 22px;
     font-size: 0.95rem;
     font-weight: 500;
     text-decoration: none;
-    border-radius: 25px; /* Bordes redondeados sutiles */
+    border-radius: 25px;
+    /* Bordes redondeados sutiles */
     margin-top: 15px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Transición suave para la animación */
+    transition: all 0.3s ease;
+    /* Transición suave para la animación */
 }
 
 /* Efecto al pasar el ratón por encima (Hover) */
 .direccion:hover {
-    background-color: #eef3f7; /* Se rellena con el fondo suave del contador */
-    color: #41566e; /* El texto se oscurece un poco */
-    border-color: var(--accent-hover); /* El borde también se oscurece */
-    transform: translateY(-1px); /* Micro-movimiento hacia arriba */
+    background-color: #eef3f7;
+    /* Se rellena con el fondo suave del contador */
+    color: #41566e;
+    /* El texto se oscurece un poco */
+    border-color: var(--accent-hover);
+    /* El borde también se oscurece */
+    transform: translateY(-1px);
+    /* Micro-movimiento hacia arriba */
 }
 
 /* --- ANIMACIONES --- */
